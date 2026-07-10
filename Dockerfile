@@ -1,4 +1,4 @@
-FROM bitnami/wordpress-nginx
+FROM bitnami/wordpress
 LABEL maintainer "Michael Buluma"
 
 ## Change user to perform privileged actions
