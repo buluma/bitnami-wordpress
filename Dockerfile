@@ -9,7 +9,7 @@ RUN install_packages vim
 USER 1001
 
 ## Modify 'worker_connections' on NGINX config file to '512'
-RUN sed -i -r "s#(\s+worker_connections\s+)[0-9]+;#i2;#" /opt/bitnami/nginx/conf/nginx.conf
+RUN sed -i 's/worker_connections [0-9]\+/worker_connections 512/' /opt/bitnami/nginx/conf/nginx.conf
 
 ## Modify the ports used by NGINX by default
 # It is also possible to change these environment variables at runtime
